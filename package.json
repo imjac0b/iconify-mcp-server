@@ -1,11 +1,11 @@
 {
   "name": "iconify-mcp-server",
   "type": "module",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "main": "./dist/index.js",
   "description": "MCP server for Iconify",
   "scripts": {
-    "build": "bun build src/index.ts --outdir dist --target node --format cjs",
+    "build": "bun run build.ts",
     "prepublishOnly": "bun run build"
   },
   "bin": {
@@ -30,14 +30,13 @@
   "author": "Jacob <me@jacob.com.hk>",
   "license": "GPL-3.0",
   "devDependencies": {
-    "@types/bun": "latest"
+    "@types/bun": "latest",
+    "@modelcontextprotocol/sdk": "^1.18.2",
+    "ofetch": "^1.4.1",
+    "zod": "^3.25.76"
   },
   "peerDependencies": {
     "typescript": "^5.8.3"
   },
-  "dependencies": {
-    "@modelcontextprotocol/sdk": "^1.18.2",
-    "ofetch": "^1.4.1",
-    "zod": "^3.25.76"
-  }
+  "dependencies": {}
 }
